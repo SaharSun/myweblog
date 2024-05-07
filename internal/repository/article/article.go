@@ -1,17 +1,14 @@
 package article
 
 import (
-	"github.com/SaharSun/myweblog/blob/master/internal/entity/article"
 	"errors"
-
-	
+	"github.com/SaharSun/myweblog/internal/entity/article"
 )
 
- var (
+var (
 	ErrArticleNotFound  = errors.New("Article Not found")
 	ErrArticleAlreadyExist = errors.New("Article Already Exist")
- )
-
+)
 
 
 type Repository interface {
