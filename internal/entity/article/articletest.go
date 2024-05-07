@@ -19,10 +19,9 @@ func TestArticle_SetTag(t *testing.T) {
 func TestNewArticle(t *testing.T) {
 	tags := []string{"tag1", "tag2", "tag3"}
 	article := NewArticle("title", "slug", "asdfg", tags)
-	// article.SetTags(tags)
-	expected := "tag1,tag2,tag3"
 
-	assert.Equal(t, expected, article.Tags)
+
+	assert.Equal(t, "tag1,tag2,tag3", article.Tags)
 	assert.Equal(t, time.Now().Unix(), article.CreatedAt)
 
 }

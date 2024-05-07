@@ -1,6 +1,9 @@
 package article
 
-import "strings"
+import (
+	"strings"
+	"time"
+)
 
 type Article struct {
 	ID      int64
@@ -17,7 +20,10 @@ type Article struct {
 
 func NewArticle(title , slug , content string , tags []string) *Article {
 	a := &Article{
-		Title: title, Slug: slug , Content: content,
+		Title: title,
+		Slug: slug ,
+		Content: content,
+		CreatedAt: time.Now().Unix(),
 	}
 	a.SetTags(tags)
 	return a 
