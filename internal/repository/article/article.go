@@ -6,15 +6,14 @@ import (
 )
 
 var (
-	ErrArticleNotFound  = errors.New("Article Not found")
+	ErrArticleNotFound     = errors.New("Article Not found")
 	ErrArticleAlreadyExist = errors.New("Article Already Exist")
 )
 
-
 type Repository interface {
-	Creat(article *article.Article)error
-	Update(article *article.Article)error
-	Detial()*article.Article
-	Delet() error
-	List()[]*article.Article
+	Create(article *article.Article) (int64, error)
+	Update(article *article.Article) error
+	Detail(article *article.Article) (*article.Article, error)
+	Delete(article *article.Article) error
+	List() ([]*article.Article, error)
 }
