@@ -6,8 +6,8 @@ import (
 )
 
 var (
-	ErrArticleNotFound     = errors.New("Article Not found")
-	ErrArticleAlreadyExist = errors.New("Article Already Exist")
+	ErrArticleNotFound = errors.New("article Not found")
+	ErrArticleAlreadyExist = errors.New("article Already Exist")
 )
 
 type Repository interface {
