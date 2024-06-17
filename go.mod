@@ -2,14 +2,6 @@ module weblog
 
 go 1.22.1
 
-<<<<<<< Updated upstream
-=======
-require (
-	github.com/stretchr/testify v1.9.0
-	gorm.io/gorm v1.25.10
-)
-
->>>>>>> Stashed changes
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
