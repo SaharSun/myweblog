@@ -5,7 +5,7 @@ import (
 
 	"github.com/SaharSun/myweblog/internal/repository/article"
 
-	entityArticle "github.com/SaharSun/myweblog/internal/service/article"
+	entityArticle "github.com/SaharSun/myweblog/internal/entity/article"
 )
 
 type Article struct {
