@@ -1,4 +1,4 @@
-module weblog
+module myweblog
 
 go 1.22.1
 
