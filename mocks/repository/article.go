@@ -1,7 +1,7 @@
 package repository
 
 import (
-	articleEntity "github.com/SaharSun/myweblog/blob/master/internal/entity/article"
+	articleEntity "github.com/SaharSun/myweblog/internal/entity/article"
 	"github.com/stretchr/testify/mock"
 )
 

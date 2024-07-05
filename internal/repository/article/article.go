@@ -1,7 +1,7 @@
 package article
 
 import (
-	"github.com/SaharSun/myweblog/blob/master/internal/entity/article"
+	"github.com/SaharSun/myweblog/internal/entity/article"
 	"errors"
 
 	

@@ -1,10 +1,9 @@
 package article
 
 import (
-	"errors"
-	"myweblog/internal/repository/article"
+	// "errors"
 
-	"github.com/SaharSun/myweblog/internal/repository/article"
+	"https://github.com/SaharSun/myweblog/internal/repository/article"
 	// "github.com/rs/zerolog/log"
 
 	entityArticle "github.com/SaharSun/myweblog/internal/entity/article"
@@ -22,7 +21,6 @@ func NewArticle(articleRepository article.Repository) *Article {
 	}
 }
 
-
 func (a Article) Create(artEnt *entityArticle.Article) error {
 	// if err := a.articleRepository.Creat(artEnt); err != nil {
 	// 	if errors.Is(err, article.ErrArticleAlreadyExist) {
@@ -31,5 +29,5 @@ func (a Article) Create(artEnt *entityArticle.Article) error {
 	// 	log.Error().Err(err).Msg("error in creating article")
 	// 	return err
 	// }
-	// return nil
+	return nil
 }

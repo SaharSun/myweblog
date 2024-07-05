@@ -10,4 +10,5 @@ require (
 	github.com/stretchr/testify v1.9.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	github.com/SaharSun/myweblog v1.2.3
+	github.com/ymz-ncnk/mok v1.2.3
 )
