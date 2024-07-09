@@ -4,21 +4,21 @@ import (
 	"errors"
 
 	"github.com/SaharSun/myweblog/internal/repository/article"
-	// "github.com/rs/zerolog/log"
+	loggerInfra "https://github.com/SaharSun/myweblog/internal/infrastracture/logger"
 
 	entityArticle "github.com/SaharSun/myweblog/internal/entity/article"
 )
 
 type Article struct {
 	articleRepository article.Repository
-	// logger            loggerInfra.Logger
+	logger            loggerInfra.Logger
 }
 
-func NewArticle(articleRepository article.Repository) *Article {
-	return &Article{
-		articleRepository: articleRepository,
-		// logger:            logger,
-	}
+func NewArticle(articleRepository article.Repository , logger loggerInfra.Logger) *Article {
+		return &Article{
+			articleRepository: articleRepository,
+			logger:            logger,
+		}
 }
 
 func (a Article) Create(artEnt *entityArticle.Article) error {
