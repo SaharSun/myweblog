@@ -4,7 +4,7 @@ import (
 	"errors"
 
 	"github.com/SaharSun/myweblog/internal/repository/article"
-	loggerInfra "https://github.com/SaharSun/myweblog/internal/infrastracture/logger"
+	loggerInfra "github.com/SaharSun/myweblog/internal/infrastracture/logger"
 
 	entityArticle "github.com/SaharSun/myweblog/internal/entity/article"
 )
