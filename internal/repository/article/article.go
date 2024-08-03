@@ -14,9 +14,9 @@ import (
 
 
 type Repository interface {
-	Creat(article *article.Article)error
+	Create(article *article.Article)error
 	Update(article *article.Article)error
 	Detial()*article.Article
-	Delet() error
+	Delete(id int) error
 	List()[]*article.Article
 }

@@ -21,14 +21,28 @@ func NewArticle(articleRepository article.Repository , logger loggerInfra.Logger
 		}
 }
 
-func (a Article) Create(artEnt *entityArticle.Article) error {
-	id, err := a.articleRepository.Create(artEnt)
-	if err != nil {
-		if errors.Is(err, article.ErrArticleAlreadyExist) {
-			return id, err
-		}
-		a.logger.Error(err.Error())
-		return id, err
-	}
-	return id, nil
+func (a *Article) Create(artEnt *entityArticle.Article) error {  
+    err := a.articleRepository.Create(artEnt)  
+    if err != nil {  
+        if errors.Is(err, article.ErrArticleAlreadyExist) {  
+            return err  
+        }  
+        a.logger.Error(err.Error())  
+        return err  
+    }  
+    return nil  
+}
+
+package repository  
+
+type ArticleMock struct {}  
+
+// پیاده‌سازی متد Create  
+func (m *ArticleMock) Create(article Article) error {  
+    return nil // شبیه‌سازی موفق  
+}  
+
+// پیاده‌سازی متد Delete  
+func (m *ArticleMock) Delete(id int) error {  
+    return nil // شبیه‌سازی موفق  
 }
