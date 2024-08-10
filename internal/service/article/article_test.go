@@ -1,28 +1,31 @@
-package article  
+package article
 
-import (  
+import (
+	// "errors"
+	"github.com/SaharSun/myweblog/internal/entity/article"
+	// articleRepository "github.com/SaharSun/myweblog/internal/repository/article"
 	
-	// "github.com/SaharSun/myweblog/internal/repository" 
-	"github.com/SaharSun/myweblog/internal/infrastracture/logger"  
-	"github.com/stretchr/testify/assert"  
-	"github.com/SaharSun/myweblog/internal/entity/article"  
-	"github.com/SaharSun/myweblog/mocks/repository" 
-	"testing" 
-	
-	
-)  
+	"github.com/SaharSun/myweblog/mocks/mocks/infrastructure"
+	"github.com/SaharSun/myweblog/mocks/mocks/repository"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/mock"
 
-func TestArticle_Create_Success(t *testing.T){  
-	// articleMock := new(repository.ArticleMock) 
-	articleMock := &repository.ArticleMock{} 
-	articleEnt := article.NewArticle("article", "article-1",  
-	"asddffgh xdfgggfggggg", []string{"tag1", "tag2","tag3"})  
-	  
-	// بررسی صدازنی شده متدهای مورد نیاز  
-	articleMock.On("Create", articleEnt).Return(nil)  
-	loggerMock := new(logger.Logger)  
-	articleService := NewArticle(articleMock, loggerMock)   
-	err := articleService.Create(articleEnt)  
-	assert.Nil(t, err)  
-	articleMock.AssertCalled(t, "Create", articleEnt)  
+	// "github.com/SaharSun/myweblog/internal/infrastracture/logger"
+
+	"testing"
+)
+
+func TestArticle_Create_Success(t *testing.T) {
+	logger := new(infrastructure.LoggerMock)
+	articleMock := new(repository.ArticleMock)
+	articleEnt := article.NewArticle("article1", "article-1",
+		"dsggdsgds lkadsjgdajk dlsagjlgd jalgjdka lkadgs",
+		[]string{"tag1", "tag2", "tag3"})
+	articleMock.On("Create", articleEnt).Return(1, nil)
+
+	articleService := NewArticle(articleMock, logger)
+	id:= articleService.Create(articleEnt)
+	// assert.Nil(t, err)
+	assert.Equal(t, id, int64(1))
+	articleMock.AssertExpectations(t)
 }
