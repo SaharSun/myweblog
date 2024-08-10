@@ -5,8 +5,8 @@ import (
 	"github.com/SaharSun/myweblog/internal/entity/article"
 	// articleRepository "github.com/SaharSun/myweblog/internal/repository/article"
 	
-	"github.com/SaharSun/myweblog/mocks/mocks/infrastructure"
-	"github.com/SaharSun/myweblog/mocks/mocks/repository"
+	"github.com/SaharSun/myweblog/mocks/infrastructure"
+	"github.com/SaharSun/myweblog/mocks/repository"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
